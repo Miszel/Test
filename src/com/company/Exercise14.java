@@ -12,19 +12,19 @@ public class Exercise14{
                 Product product = new Product();
                 product.price = Float.valueOf(result[x]);
                 System.out.println("netto product price:" + product.price);
-                product.tax = calculateGrossPrice(product.price);
+                product.tax = Product.calculateGrossPrice(product.price);
                 products[x] = product;
             }
             return products;
         }
-
+/*
         public static float calculateGrossPrice(float net){
             float gross = 0.5f;
 
             float brutto = (gross*net)+net;
             System.out.println("brutto product price:" + brutto);
             return brutto;
-        }
+        }*/
 
         public static float calculateAverage (Product[] tab){
 
