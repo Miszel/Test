@@ -20,7 +20,7 @@ public class Exercise13 {
 
    public static float calculateAverage (Product[] x){
 
-        int sum = 0;
+        float sum = 0;
         for (int i=0;i<x.length;i++) {
             sum+=x[i].price;
         }
