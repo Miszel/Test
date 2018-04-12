@@ -3,7 +3,7 @@ package com.company;
 public class Exercise14{
     public static Product[] changeType() {
 
-            String formInput = "10;2;1.5";
+            String formInput = "10;2";
             String[] result = formInput.split(";");
             Product[] products = new Product[result.length];
 
@@ -12,25 +12,20 @@ public class Exercise14{
                 Product product = new Product();
                 product.price = Float.valueOf(result[x]);
                 System.out.println("netto product price:" + product.price);
-                product.tax = Product.calculateGrossPrice(product.price);
+                product.tax = 0.5f;
+                System.out.println("tax product :" + product.tax);
                 products[x] = product;
             }
             return products;
         }
-/*
-        public static float calculateGrossPrice(float net){
-            float gross = 0.5f;
 
-            float brutto = (gross*net)+net;
-            System.out.println("brutto product price:" + brutto);
-            return brutto;
-        }*/
 
         public static float calculateAverage (Product[] tab){
 
             float sum = 0;
             for (int i=0;i<tab.length;i++) {
-                sum+=tab[i].tax;
+                float gross = tab[i].calculateGrossPrice();
+                sum+=gross;
             }
             return (float)sum/tab.length;
 

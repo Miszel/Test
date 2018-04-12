@@ -4,10 +4,9 @@ public class Product {
     float price;
     float tax;
 
-    public static float calculateGrossPrice(float net){
-        float gross = 0.5f;
+     float calculateGrossPrice(){
 
-        float brutto = (gross*net)+net;
+        float brutto = (tax*price)+price;
         System.out.println("brutto product price:" + brutto);
         return brutto;
     }
