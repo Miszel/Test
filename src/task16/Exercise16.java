@@ -36,5 +36,5 @@ public class Exercise16 {
         float average =calculateAverage(table);
         System.out.println("average of all products:" + average);
     }
-
+//kk
 }
