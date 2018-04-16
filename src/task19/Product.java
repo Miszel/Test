@@ -1,4 +1,4 @@
-package task18;
+package task19;
 
 public class Product {
     private float price;
@@ -50,6 +50,10 @@ class Tool extends Product {
         return y;
     }
 
+    @Override
+    public String toString() {
+        return "Product with price " + getPrice() + " and tax of " + getTax();
+    }
 
 }
 
