@@ -31,6 +31,10 @@ public class Product {
         //System.out.println("brutto product price:" + gross);
         return gross;
     }
+
+
+
+
 }
 
 class Tool extends Product {
@@ -45,6 +49,12 @@ class Tool extends Product {
         //System.out.println("brutto product price for tool:" + y);
         return y;
     }
+
+    @Override
+    public String toString() {
+        return "Product with price " + getPrice() + " and tax of " + getTax();
+    }
+
 }
 
 class Boiler extends Product{

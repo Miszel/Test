@@ -16,6 +16,7 @@ public class Exercise18 {
             System.out.println("net price of tool product is:" + " " + tool.getPrice());
             System.out.println("tax price of tool product is:" + " " + tool.getTax());
             System.out.println("gross price of tool product is:" + " " + tool.calculateGrossPrice());
+            System.out.println(tool);
             tools[i] = tool;
         }
         //wyliczenie sredniej ceny brutto dla toolow
@@ -35,6 +36,8 @@ public class Exercise18 {
         //wyliczenie sredniej ceny brutto dla boilerow
         float average2 = calculateAverage(boilers);
         System.out.println("gross average of all boiler products:" + average2);
+
+
 
     }
 
