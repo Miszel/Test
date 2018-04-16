@@ -42,7 +42,13 @@ public class Product {
 
 class Tool extends Product {
     Tool(float price) {
-        super(price, 0.15f);
+        super(price, 0.5f);
     }
 
+}
+
+class Boiler extends Product{
+    Boiler(float price){
+        super(price,0.1f);
+    }
 }
