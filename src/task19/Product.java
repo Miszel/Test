@@ -44,10 +44,7 @@ class Tool extends Product {
 
     @Override
     float calculateGrossPrice() {
-        float x= super.calculateGrossPrice();
-        float y= x-1;
-        //System.out.println("brutto product price for tool:" + y);
-        return y;
+      return super.calculateGrossPrice()-1;
     }
 
     @Override

@@ -3,9 +3,10 @@ package task20;
 public class Exercise20 {
     public static void main(String[] args) {
 
-        String formInput = "10;2.5";
+        String formInput = "10;10.5";
         String[] result = formInput.split(";");
         float[] table = changeType(result);
+        Promotion promotion = new FixedDiscountPromotion();
 
         //stworzenie tablicy obiektow tool
         Tool[] tools = new Tool[table.length];
@@ -15,12 +16,13 @@ public class Exercise20 {
             System.out.println("net price of tool product is:" + " " + tool.getPrice());
             System.out.println("tax price of tool product is:" + " " + tool.getTax());
             System.out.println("gross price of tool product is:" + " " + tool.calculateGrossPrice());
+            System.out.println("gross price of tool after fixed promotion:" + " " + promotion.calculate(tool));
             System.out.println(tool);
             tools[i] = tool;
         }
         //wyliczenie sredniej ceny brutto dla toolow
         float average1 = calculateAverage(tools);
-        System.out.println("gross average of all tool products:" + average1);
+        //System.out.println("gross average of all tool products:" + average1);
 
 
         //stworzenie tablicy obiektow boiler
@@ -30,11 +32,12 @@ public class Exercise20 {
             System.out.println("net price of bolier product is:" + " " + boiler.getPrice());
             System.out.println("tax price of bolier product is:" + " " + boiler.getTax());
             System.out.println("gross price of boiler product is:" + " " + boiler.calculateGrossPrice());
+            System.out.println("gross price of tool after fixed promotion:" + " " + promotion.calculate(boiler));
             boilers[i] = boiler;
         }
         //wyliczenie sredniej ceny brutto dla boilerow
         float average2 = calculateAverage(boilers);
-        System.out.println("gross average of all boiler products:" + average2);
+        //System.out.println("gross average of all boiler products:" + average2);
 
 
 

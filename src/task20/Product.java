@@ -37,30 +37,8 @@ public class Product {
 
 }
 
-class Tool extends Product {
-    Tool(float price) {
-        super(price, 0.5f);
-    }
 
-    @Override
-    float calculateGrossPrice() {
-        float x= super.calculateGrossPrice();
-        float y= x-1;
-        //System.out.println("brutto product price for tool:" + y);
-        return y;
-    }
 
-    @Override
-    public String toString() {
-        return "Product with price " + getPrice() + " and tax of " + getTax();
-    }
 
-}
-
-class Boiler extends Product{
-    Boiler(float price){
-        super(price,0.1f);
-    }
-}
 
 
