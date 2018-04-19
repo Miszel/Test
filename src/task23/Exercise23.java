@@ -41,9 +41,7 @@ public class Exercise23 {
             if (product[x].calculateGrossPrice() < price) {
                 y++;
             }
-
         }
-
         Product[] conditionedProducts = new Product[y];
         for (int x = 0; x < product.length; x++) {
             if (product[x].calculateGrossPrice() < price) {
@@ -54,5 +52,6 @@ public class Exercise23 {
 
         return conditionedProducts;
     }
+
 
 }
