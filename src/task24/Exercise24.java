@@ -71,15 +71,15 @@ public class Exercise24 {
         return conditionedProducts;
     }
 
-    public static Product[] addNewElementToArray (Product[] product, Product newProduct){
+    public static Product[] addNewElementToArray (Product[] products, Product newProduct){
 
-       Product[] arrayWithNewElement = new Product[product.length +1];
+       Product[] arrayWithNewElement = new Product[products.length +1];
 
-       for(int i=0; i<product.length; i++) {
+       for(int i=0; i<products.length; i++) {
 
-           arrayWithNewElement[i] = product[i];
+           arrayWithNewElement[i] = products[i];
        }
-       arrayWithNewElement[product.length]= newProduct;
+       arrayWithNewElement[products.length]= newProduct;
 
        //System.out.println(Arrays.toString(arrayWithNewElement));
        //System.out.println(arrayWithNewElement[a]);
