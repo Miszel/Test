@@ -20,6 +20,7 @@ public class Exercise23 {
         }
 
         System.out.println(Arrays.toString(conditionCheck(products, 9f)));
+        System.out.println(Arrays.toString(conditionCheck(products, 20.5f)));
 
     }
 
@@ -48,8 +49,7 @@ public class Exercise23 {
             if (product[x].calculateGrossPrice() < price) {
                    conditionedProducts[i] = product[x];
                    i++;
-                    System.out.println("hahaha"+i+conditionedProducts[i]);
-                }
+                 }
             }
 
         return conditionedProducts;
