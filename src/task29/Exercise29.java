@@ -54,7 +54,7 @@ public class Exercise29 {
 
         System.out.println("-----------------");
         for (Product product : anotherList) {
-            System.out.println(anotherList);
+            System.out.println(product);
         }
 
 
@@ -66,7 +66,7 @@ public class Exercise29 {
 
         System.out.println("-----------------");
         for (Product product : anotherList) {
-            System.out.println(anotherList);
+            System.out.println(product);
         }
 
 
@@ -78,9 +78,7 @@ public class Exercise29 {
         }
 
         System.out.println("-----------------");
-        for (Product product : anotherList) {
-            System.out.println(anotherList);
-        }
+        System.out.println(anotherList);
 
 
         System.out.println(products.isEmpty());

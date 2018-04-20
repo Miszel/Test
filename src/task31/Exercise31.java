@@ -22,10 +22,14 @@ public class Exercise31 {
 
             Set<Product> productsSet = new HashSet<>(productsList);
 
-
+            List<Product> productsList2 = new ArrayList<>(productsSet);
 
             System.out.println("Set:");
             for (Product product : productsSet)
+                System.out.println(product);
+
+            System.out.println("list2:");
+            for (Product product : productsList2)
                 System.out.println(product);
 
         }

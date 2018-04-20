@@ -76,7 +76,7 @@ public class Exercise25 {
 
         for(int i=0; i<products.length-1; i++) {
 
-            arrayWithoutLastElement[i] = products[i]
+            arrayWithoutLastElement[i] = products[i];
         }
 
         return arrayWithoutLastElement;

@@ -34,7 +34,7 @@ public class Exercise34 {
             System.out.println("Product collection contains your product");
         }
         else {
-            System.out.println("Product collection doesn't contain your product :(" )
+            System.out.println("Product collection doesn't contain your product :(" );
         }
     }
 

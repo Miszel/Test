@@ -10,8 +10,8 @@ public class Exercise21 {
         Promotion promotion = new FixedDiscountPromotion();
         Promotion promotion2 = new PercentagePromotion();
 
-        //stworzenie tablicy obiektow tool
-        Tool[] tools = new Tool[table.length];
+
+
 
         for (int i = 0; i < table.length; i++) {
             Tool tool = new Tool(table[i]);
@@ -21,16 +21,16 @@ public class Exercise21 {
             //System.out.println("gross price of tool product is:" + " " + tool.calculateGrossPrice());
 
             //System.out.println("gross price of tool after fixed promotion:" + " " + promotion.calculate(tool));
-            System.out.println("calcualtion for fixed promo:");
+            System.out.println("calculation for fixed promo:");
             applyPromotion(promotion,tool);
-            System.out.println("calcualtion for percentage promo:");
+            System.out.println("calculation for percentage promo:");
             applyPromotion(promotion2,tool);
            // System.out.println(tool);
-            tools[i] = tool;
+
         }
 
-        //stworzenie tablicy obiektow boiler
-        Boiler[] boilers = new Boiler[table.length];
+
+
         for (int i = 0; i < table.length; i++) {
             Boiler boiler = new Boiler(table[i]);
             System.out.println("------------------------------------------");
@@ -42,7 +42,7 @@ public class Exercise21 {
             applyPromotion(promotion,boiler);
             System.out.println("calcualtion for percentage promo:");
             applyPromotion(promotion2,boiler);
-            boilers[i] = boiler;
+
         }
 
 
