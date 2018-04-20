@@ -17,7 +17,7 @@ public class Exercise30 {
         System.out.println("List:");
        for (Product product : productsList)
         System.out.println(product);
-
+//        UCZ SIĘ KAROLINA!!!!!
         Set<Product> productsSet = new HashSet<>();
         productsSet.add(product1);
         productsSet.add(product1);
