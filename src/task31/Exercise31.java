@@ -20,16 +20,11 @@ public class Exercise31 {
             for (Product product : productsList)
                 System.out.println(product);
 
-            Set<Product> productsSet = new HashSet<>();
-            productsSet.add(product1);
-            productsSet.add(product1);
-            productsSet.add(product1);
-            System.out.println("Set:");
-            for (Product product : productsSet)
-                System.out.println(product);
+            Set<Product> productsSet = new HashSet<>(productsList);
 
-            productsSet.addAll(productsList);
-            System.out.println("--------");
+
+
+            System.out.println("Set:");
             for (Product product : productsSet)
                 System.out.println(product);
 
