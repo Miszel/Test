@@ -19,21 +19,22 @@ public class Cart {
     }
 
     public void addProductToCart(Product product) {
-        addProductToCart(product,  1);
+        addProductToCart(product, 1);
 
     }
 
-    public float countCartPrice(){
+    public float calculateCartPrice() {
         float cost = 0;
-        for(Map.Entry<Product, Integer> entry: productsInCart.entrySet()) {
-            cost = cost + entry.getKey().calculateGrossPrice()* entry.getValue();
+        for (Map.Entry<Product, Integer> entry : productsInCart.entrySet()) {
+            cost = cost + entry.getKey().calculateGrossPrice() * entry.getValue();
         }
 
-     return cost;
+        return cost;
     }
 
-
-
+    public Set<Product> getProductsInCart() {
+        return productsInCart.keySet();
+    }
 
 
     @Override

@@ -20,8 +20,9 @@ public class Exercise37 {
         cart.addProductToCart(product2,1);
 
 
-        System.out.println(cart);
-        System.out.println(cart.countCartPrice());
+
+        System.out.println("cart cost:"+" "+cart.calculateCartPrice());
+        System.out.println(cart.getProductsInCart());
 
     }
 
