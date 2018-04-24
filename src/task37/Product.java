@@ -8,17 +8,21 @@ public class Product {
     private float tax;
     private String name;
 
-    Product(String name, float price, float tax){
+    Product(String name, float price, float tax) {
         this.name = name;
         this.price = price;
         this.tax = tax;
 
     }
 
-    public String getName() {return name;}
+    public String getName() {
+        return name;
+    }
+
     public float getPrice() {
         return price;
     }
+
     public float getTax() {
         return tax;
     }
@@ -27,17 +31,19 @@ public class Product {
     public void setName(String name) {
         this.price = price;
     }
+
     public void setPrice(float price) {
         this.price = price;
     }
+
     public void setTax(float tax) {
         this.tax = tax;
     }
 
 
-    float calculateGrossPrice(){
+    float calculateGrossPrice() {
 
-        float gross = (tax*price)+price;
+        float gross = (tax * price) + price;
         //System.out.println("brutto product price:" + gross);
         return gross;
     }
