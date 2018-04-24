@@ -17,10 +17,11 @@ public class Exercise37 {
         cart.addProductToCart(product1,4);
         cart.addProductToCart(product1);
         cart.addProductToCart(product2,4);
+        cart.addProductToCart(product2,1);
 
 
         System.out.println(cart);
-
+        System.out.println(cart.countCartPrice());
 
     }
 

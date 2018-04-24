@@ -23,9 +23,13 @@ public class Cart {
 
     }
 
-    public countPrice(){
+    public float countCartPrice(){
+        float cost = 0;
+        for(Map.Entry<Product, Integer> entry: productsInCart.entrySet()) {
+            cost = cost + entry.getKey().calculateGrossPrice()* entry.getValue();
+        }
 
-
+     return cost;
     }
 
 
