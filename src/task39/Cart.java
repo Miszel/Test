@@ -36,12 +36,11 @@ public class Cart {
         return productsInCart.keySet();
     }
 
-    public SortedSet<Product> getProductsInCartsorted(){
+    public SortedSet<Product> getProductsInCartSorted() {
 
-        SortedSet sortedProducts = new TreeSet<>();
-        sortedProducts.addAll(getProductsInCart());
+        SortedSet<Product> sortedProducts = new TreeSet<>(getProductsInCart());
 
-    return sortedProducts;
+        return sortedProducts;
     }
 
 

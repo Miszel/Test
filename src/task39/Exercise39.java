@@ -34,7 +34,7 @@ public class Exercise39 {
         Collections.sort(list);
         System.out.println(list);
 
-        System.out.println(cart.getProductsInCartsorted());
+        System.out.println(cart.getProductsInCartSorted());
 
 
     }
