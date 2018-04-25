@@ -1,7 +1,6 @@
-package task17;
+package task21;
 
 public class Product {
-
     private float price;
     private float tax;
 
@@ -9,8 +8,6 @@ public class Product {
         this.price = price;
         this.tax = tax;
     }
-
-
 
     public float getPrice() {
         return price;
@@ -31,7 +28,7 @@ public class Product {
     float calculateGrossPrice(){
 
         float gross = (tax*price)+price;
-        System.out.println("brutto product price:" + gross);
+        //System.out.println("brutto product price:" + gross);
         return gross;
     }
 
@@ -40,15 +37,8 @@ public class Product {
 
 }
 
-class Tool extends Product {
-    Tool(float price) {
-        super(price, 0.5f);
-    }
 
-}
 
-class Boiler extends Product{
-    Boiler(float price){
-        super(price,0.1f);
-    }
-}
+
+
+

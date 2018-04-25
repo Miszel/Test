@@ -1,6 +1,6 @@
-package task17;
+package task18;
 
-public class Exercise17 {
+public class Exercise18 {
 
     public static void main(String[] args) {
 
@@ -15,6 +15,8 @@ public class Exercise17 {
             Tool tool = new Tool(table[i]);
             System.out.println("net price of tool product is:" + " " + tool.getPrice());
             System.out.println("tax price of tool product is:" + " " + tool.getTax());
+            System.out.println("gross price of tool product is:" + " " + tool.calculateGrossPrice());
+
             tools[i] = tool;
         }
         //wyliczenie sredniej ceny brutto dla toolow
@@ -28,11 +30,14 @@ public class Exercise17 {
             Boiler boiler = new Boiler(table[i]);
             System.out.println("net price of bolier product is:" + " " + boiler.getPrice());
             System.out.println("tax price of bolier product is:" + " " + boiler.getTax());
+            System.out.println("gross price of boiler product is:" + " " + boiler.calculateGrossPrice());
             boilers[i] = boiler;
         }
         //wyliczenie sredniej ceny brutto dla boilerow
         float average2 = calculateAverage(boilers);
         System.out.println("gross average of all boiler products:" + average2);
+
+
 
     }
 
@@ -57,6 +62,4 @@ public class Exercise17 {
         return (float) sum / tab.length;
 
     }
-
-
 }

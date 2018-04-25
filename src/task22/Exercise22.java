@@ -1,38 +1,34 @@
-package task17;
+package task22;
 
-public class Exercise17 {
-
+public class Exercise22 {
     public static void main(String[] args) {
 
-        String formInput = "10;2.5";
+        String formInput = "4;10.5";
         String[] result = formInput.split(";");
         float[] table = changeType(result);
 
-        //stworzenie tablicy obiektow tool
         Tool[] tools = new Tool[table.length];
-
         for (int i = 0; i < table.length; i++) {
             Tool tool = new Tool(table[i]);
+            System.out.println("------------------------------------------");
             System.out.println("net price of tool product is:" + " " + tool.getPrice());
             System.out.println("tax price of tool product is:" + " " + tool.getTax());
+            System.out.println("gross price of tool product is:" + " " + tool.calculateGrossPrice());
             tools[i] = tool;
         }
-        //wyliczenie sredniej ceny brutto dla toolow
-        float average1 = calculateAverage(tools);
-        System.out.println("gross average of all tool products:" + average1);
 
-
-        //stworzenie tablicy obiektow boiler
         Boiler[] boilers = new Boiler[table.length];
         for (int i = 0; i < table.length; i++) {
             Boiler boiler = new Boiler(table[i]);
+            System.out.println("------------------------------------------");
             System.out.println("net price of bolier product is:" + " " + boiler.getPrice());
             System.out.println("tax price of bolier product is:" + " " + boiler.getTax());
+            System.out.println("gross price of tool product is:" + " " + boiler.calculateGrossPrice());
             boilers[i] = boiler;
         }
-        //wyliczenie sredniej ceny brutto dla boilerow
-        float average2 = calculateAverage(boilers);
-        System.out.println("gross average of all boiler products:" + average2);
+
+        conditionCheck(tools, 6f);
+        conditionCheck(boilers, 6f);
 
     }
 
@@ -46,17 +42,13 @@ public class Exercise17 {
         return tabFloat;
     }
 
-    //wyliczenie sredniej z cen brutto
-    public static float calculateAverage(Product[] tab) {
+    public static void conditionCheck(Product[] product, float price) {
+        for (int x = 0; x < product.length; x++) {
+            if (product[x].calculateGrossPrice() < price) {
+                System.out.println(product[x]+" is with price lesser than" +" "+ price);
+            }
 
-        float sum = 0;
-        for (int i = 0; i < tab.length; i++) {
-            float gross = tab[i].calculateGrossPrice();
-            sum += gross;
         }
-        return (float) sum / tab.length;
 
     }
-
-
 }
