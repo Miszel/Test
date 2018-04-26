@@ -2,10 +2,8 @@ package task40;
 
 import java.util.*;
 
-
 public class Cart {
-
-    private final Map<Product, Integer> productsInCart = new HashMap<>();
+    private final Map<Product, Integer> productsInCart = new LinkedHashMap<>();
 
     public void addProductToCart(Product product, int amount) {
 
@@ -35,12 +33,13 @@ public class Cart {
         return productsInCart.keySet();
     }
 
+    /*
     public SortedSet<Product> getProductsInCartSorted() {
 
         SortedSet<Product> sortedProducts = new TreeSet<>(getProductsInCart());
 
         return sortedProducts;
-    }
+    }*/
 
 
     @Override
@@ -50,4 +49,3 @@ public class Cart {
                 '}';
     }
 }
-
