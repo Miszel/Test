@@ -1,16 +1,16 @@
 package task41;
 
-public class PercentagePromotion extends AbstractPromotion{
+public class PercentagePromotion extends AbstractPromotion {
 
     private final float discount;
 
     public PercentagePromotion(float threshold, float discount) {
-       super(threshold);
+        super(threshold);
         this.discount = discount;
     }
 
     @Override
     public float apply(Cart cart) {
-        return cart.calculateCartPrice()*discount;
+        return cart.calculateCartPrice() * discount;
     }
 }

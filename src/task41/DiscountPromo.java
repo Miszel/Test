@@ -2,7 +2,7 @@ package task41;
 
 public class DiscountPromo extends AbstractPromotion {
 
-       private final float discount;
+    private final float discount;
 
     public DiscountPromo(float threshold, float discount) {
         super(threshold);
@@ -10,10 +10,9 @@ public class DiscountPromo extends AbstractPromotion {
     }
 
 
-
     @Override
     public float apply(Cart cart) {
-        return cart.calculateCartPrice()-discount;
+        return cart.calculateCartPrice() - discount;
     }
 
 
