@@ -11,8 +11,8 @@ public class DiscountPromo extends AbstractPromotion {
 
 
     @Override
-    public float apply(Cart cart) {
-        return cart.calculateCartPrice() - discount;
+    public float apply(Order order) {
+        return order.getCartPrice() - discount;
     }
 
 

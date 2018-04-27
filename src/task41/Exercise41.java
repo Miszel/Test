@@ -33,7 +33,7 @@ public class Exercise41 {
         System.out.println(list);
 
         Customer customer = new Customer("Jan", "Kowalski");
-        Order order = new Order(cart, customer);
+        Order order = new Order(cart, customer, cart.calculateCartPrice());
         order.placeOrder();
 
         Promotion promotion = new DiscountPromo(100, 10f);
