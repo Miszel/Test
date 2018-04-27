@@ -7,10 +7,10 @@ public class Order {
     private final Customer customer;
     private float cartPrice;
 
-    public Order(Cart cart, Customer customer, float cartPrice) {
+    public Order(Cart cart, Customer customer) {
         this.cart = cart;
         this.customer = customer;
-        this.cartPrice = cartPrice;
+        this.cartPrice=cart.calculateCartPrice();
     }
 
     public float getCartPrice() {
