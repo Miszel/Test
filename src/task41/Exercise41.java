@@ -36,8 +36,9 @@ public class Exercise41 {
         Order order = new Order(cart, customer);
         order.placeOrder();
 
-        Promotion promotion = new DiscountPromo();
-        order.applyPromotions(Collections.singletonList(promotion));
+        Promotion promotion = new DiscountPromo(100,10f);
+        Promotion promotion1 = new PercentagePromotion(110,0.5f);
+        order.applyPromotions(Arrays.asList(promotion,promotion1));
         //TODO: zapamiętac!!!!!!:
 //        order.applyPromotions(Arrays.asList(promotion, promotion, promotion));
         //TODO: zapamiętac!!!!!!:

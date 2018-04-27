@@ -1,15 +1,19 @@
 package task41;
 
-public class DiscountPromo implements Promotion {
+public class DiscountPromo extends AbstractPromotion {
 
-    @Override
-    public boolean isApplicable(Cart cart) {
-        return cart.calculateCartPrice() > 120;
+       private final float discount;
+
+    public DiscountPromo(float threshold, float discount) {
+        super(threshold);
+        this.discount = discount;
     }
+
+
 
     @Override
     public float apply(Cart cart) {
-        return cart.calculateCartPrice()-10;
+        return cart.calculateCartPrice()-discount;
     }
 
 

@@ -18,10 +18,11 @@ public class Order {
     }
 
     public void applyPromotions(List<Promotion> promotion) {
-        if (promotion.isApplicable(cart)) {
-            System.out.println("Your order qualify for promo and you can pay " + promotion.apply(cart));
+        for (Promotion promo : promotion) {
+            if (promo.isApplicable(cart)) {
+                System.out.println("Your order qualify for promo and you can pay " + promo.apply(cart));
+            }
         }
+
     }
-
-
 }
