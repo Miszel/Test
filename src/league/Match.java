@@ -1,32 +1,31 @@
 package league;
 
-
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Match {
 
-    private final String guest;
-    private final String host;
-    Set<Player> guestListGoalPlayer = new HashSet<>();
-    Set<Player> hostListGoalPlayer = new HashSet<>();
+    public static void main(String[] args) {
 
-    public Match(String guest, String host) {
-        this.guest = guest;
-        this.host = host;
-    }
+        Player player1 = new Player("Jan", "Kowalski",8);
+        Player player2 = new Player("Robert", "Lewandowski",10);
+        System.out.println(player1);
+        System.out.println(player2);
 
-    public String getGuest() {
-        return guest;
-    }
 
-    public String getHost() {
-        return host;
-    }
+        player1.scoreGoal(1);
+        System.out.println(player1);
+        player1.scoreGoal(3);
+        System.out.println(player1);
+        player2.scoreGoal(1);
+        System.out.println(player2);
 
-    public void scoreGoal(Player player){
-//jesli team1.player -> counter dla team1 ++ i przypisz goal graczowi
 
-        //jesli team2.player --> counter dla team2++ i przypisz gol graczowi
+        List<Player> team1Players=new ArrayList<Player>();
+        team1Players.add(player1);
+        team1Players.add(player2);
+
+        Team team1=new Team("Szare wilki",team1Players);
+        System.out.println(team1);
     }
 }
