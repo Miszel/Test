@@ -1,5 +1,6 @@
 package league;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
@@ -19,12 +20,15 @@ public class Team {
         return members;
     }
 
-    @Override
-    public String toString() {
-        for(Player player:members) {
-           = player.getName()+player.getSurname()+player.getNumber();
+   public List<String> listTeamMembers(){
+        String str1="";
+        List<String> newList=new ArrayList<>();
+        for (Player player:members){
+            str1=player.getName()+" "+player.getSurname()+" "+player.getNumber();
+            newList.add(str1);
         }
+       return newList;
+   }
 
-        return getTeamName();
-    }
+
 }
