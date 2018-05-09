@@ -15,17 +15,15 @@ public class Match {
         //System.out.println(player2);
 
         //pierwsza druzyna
-        List<Player> team1Players=new ArrayList<Player>();
-        team1Players.add(player1);
-        team1Players.add(player2);
-        Team team1=new Team("Szare wilki",team1Players);
+
+
+
+        Team team1=new Team("Szare wilki");
+        team1.addPlayer(player1);
+        team1.addPlayer(player2);
         System.out.println(team1.getTeamName()+ team1.listTeamMembers());
 
-        //druga druzyna
-        List<Player> team2Players=new ArrayList<Player>();
-        team2Players.add(player3);
-        Team team2=new Team("Białe łanie",team2Players);
-        System.out.println(team2.getTeamName()+ team2.listTeamMembers());
+
 
         player1.scoreGoal(3);
         System.out.println(player1);
