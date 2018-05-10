@@ -33,9 +33,12 @@ public class Player {
 
     }
 
-
     @Override
     public String toString() {
         return  getName()+" " + getSurname()+" "+getNumber() + " goals: "+getGoalAmount();
     }
+
+
+
 }
+

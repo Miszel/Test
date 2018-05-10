@@ -21,11 +21,9 @@ public class Team {
 
     public void addPlayer(Player player){
         getMembers().add(player);
-
-
     }
 
-    public List<String> listTeamMembers() {
+   private List<String> listTeamMembers() {
         String str1 = "";
         List<String> newList = new ArrayList<>();
         for (Player player : members) {
@@ -34,6 +32,16 @@ public class Team {
         }
         return newList;
     }
+
+   @Override
+    public String toString(){
+       String teamDescription = teamName;
+       for(String player : listTeamMembers())
+       {
+           teamDescription = teamDescription + "\n" + player;
+       }
+       return teamDescription;
+   }
 
 
 }
