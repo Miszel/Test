@@ -1,5 +1,7 @@
 package league;
 
+import java.util.Objects;
+
 public class Player {
     private final String name;
     private final String surname;
@@ -37,7 +39,6 @@ public class Player {
     public String toString() {
         return  getName()+" " + getSurname()+" "+getNumber() + " goals: "+getGoalAmount();
     }
-
 
 
 }

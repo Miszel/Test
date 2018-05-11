@@ -1,16 +1,15 @@
 package league;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Match {
 
     private final Team teamHost;
     private final Team teamGuest;
-    private Map<Player, Integer > hostScorer= new LinkedHashMap<>();
-    private Map<Player, Integer> guestScorer = new LinkedHashMap<>();
+    private final List<Player> hostScorer = new ArrayList<>();
+    private final List<Player> guestScorer = new ArrayList<>();
+
 
     public Match(Team teamHost, Team teamGuest) {
         this.teamHost = teamHost;
@@ -25,11 +24,11 @@ public class Match {
         return teamGuest;
     }
 
-    public Map<Player, Integer> getGuestScorer() {
+    public List<Player> getGuestScorer() {
         return guestScorer;
     }
 
-    public Map<Player, Integer> getHostScorer() {
+    public List<Player> getHostScorer() {
         return hostScorer;
     }
 
@@ -46,6 +45,7 @@ public class Match {
         team1.addPlayer(player2);
 //        System.out.println(team1.getTeamName()+ team1.listTeamMembers());
         System.out.println(team1);
+
         //druga druzyna
         Team team2=new Team("Biale Lanie");
         team2.addPlayer(player3);
@@ -53,14 +53,25 @@ public class Match {
         System.out.println(team2);
 
         //pierwszy mecz
-
-
-
-
-
-
+        Match match1= new Match(team1,team2);
+        player1.scoreGoal(1);
+        player2.scoreGoal(2);
+        player3.scoreGoal(1);
+        match1.getHostScorer().add(player1);
+        match1.getHostScorer().add(player2);
+        match1.getGuestScorer().add(player3);
+        System.out.println(match1);
 
 
     }
 
+    @Override
+    public String toString() {
+        return "Match{" +
+                "teamHost=" + teamHost +
+                ", teamGuest=" + teamGuest +
+                ", hostScorer=" + hostScorer +
+                ", guestScorer=" + guestScorer +
+                '}';
+    }
 }

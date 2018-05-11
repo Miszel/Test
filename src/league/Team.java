@@ -6,6 +6,7 @@ import java.util.List;
 public class Team {
     private final String teamName;
     private final List<Player> members = new ArrayList<>();
+    private int points;
 
     public Team(String teamName) {
         this.teamName = teamName;
@@ -17,6 +18,10 @@ public class Team {
 
     public List<Player> getMembers() {
         return members;
+    }
+
+    public int getPoints() {
+        return points;
     }
 
     public void addPlayer(Player player){
