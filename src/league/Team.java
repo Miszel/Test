@@ -6,7 +6,7 @@ import java.util.List;
 public class Team {
     private final String teamName;
     private final List<Player> members = new ArrayList<>();
-    private int points;
+    private int points = 0;
 
     public Team(String teamName) {
         this.teamName = teamName;
@@ -24,11 +24,21 @@ public class Team {
         return points;
     }
 
-    public void addPlayer(Player player){
+    public void addPlayer(Player player) {
         getMembers().add(player);
     }
 
-   private List<String> listTeamMembers() {
+    public int addPointsForWin() {
+        this.points = this.points + 3;
+        return points;
+    }
+
+    public int addPointsForDraw() {
+        this.points = this.points + 1;
+        return points;
+    }
+
+    private List<String> listTeamMembers() {
         String str1 = "";
         List<String> newList = new ArrayList<>();
         for (Player player : members) {
@@ -38,15 +48,14 @@ public class Team {
         return newList;
     }
 
-   @Override
-    public String toString(){
-       String teamDescription = teamName;
-       for(String player : listTeamMembers())
-       {
-           teamDescription = teamDescription + "\n" + player;
-       }
-       return teamDescription;
-   }
+    @Override
+    public String toString() {
+        String teamDescription = teamName;
+        for (String player : listTeamMembers()) {
+            teamDescription = teamDescription + "\n" + player;
+        }
+        return teamDescription;
+    }
 
 
 }

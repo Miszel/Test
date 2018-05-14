@@ -6,7 +6,7 @@ public class Player {
     private final String name;
     private final String surname;
     private final int number;
-    private int goalAmount=0;
+    private int goalAmount = 0;
 
     public Player(String name, String surname, int number) {
         this.name = name;
@@ -30,14 +30,14 @@ public class Player {
         return goalAmount;
     }
 
-    public void scoreGoal(int goalAmount){
-        this.goalAmount = this.goalAmount +goalAmount;
+    public void scoreGoal() {
+        goalAmount = goalAmount + 1;
 
     }
 
     @Override
     public String toString() {
-        return  getName()+" " + getSurname()+" "+getNumber() + " goals: "+getGoalAmount();
+        return getName() + " " + getSurname() + "-" + " goals: " + getGoalAmount();
     }
 
 
