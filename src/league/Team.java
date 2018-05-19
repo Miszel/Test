@@ -3,7 +3,8 @@ package league;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team {
+
+public class Team implements Comparable<Team> {
     private final String teamName;
     private final List<Player> members = new ArrayList<>();
     private int points = 0;
@@ -42,7 +43,7 @@ public class Team {
         String str1 = "";
         List<String> newList = new ArrayList<>();
         for (Player player : members) {
-            str1 = player.getName() + " " + player.getSurname() + " " + player.getNumber();
+            str1 = player.getName() + " " + player.getSurname() + " " + player.getNumber() + ",";
             newList.add(str1);
         }
         return newList;
@@ -50,12 +51,16 @@ public class Team {
 
     @Override
     public String toString() {
-        String teamDescription = teamName;
+        String teamDescription = teamName + ":";
         for (String player : listTeamMembers()) {
-            teamDescription = teamDescription + "\n" + player;
+            teamDescription = teamDescription + " " + player;
         }
         return teamDescription;
     }
 
 
+    @Override
+    public int compareTo(Team o) {
+        return Integer.compare(points, o.points);
+    }
 }

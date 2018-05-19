@@ -1,8 +1,7 @@
 package league;
 
-import java.util.Objects;
 
-public class Player {
+public class Player implements Comparable<Player> {
     private final String name;
     private final String surname;
     private final int number;
@@ -41,5 +40,9 @@ public class Player {
     }
 
 
+    @Override
+    public int compareTo(Player o) {
+        return Integer.compare(goalAmount, o.goalAmount);
+    }
 }
 
