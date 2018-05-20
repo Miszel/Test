@@ -9,7 +9,7 @@ public class League {
         Player player2 = new Player("Robert", "Lewandowski", 10);
         Player player3 = new Player("Jan", "Kowalski", 2);
         Player player4 = new Player("Rysio", "Mały", 3);
-
+//bleee
         //pierwsza druzyna
         Team team1 = new Team("Szare wilki");
         team1.addPlayer(player1);
